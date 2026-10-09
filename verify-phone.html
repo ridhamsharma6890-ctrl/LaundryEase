@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile OTP | LaundryEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="login-box">
+            <h1>🧺 LaundryEase</h1>
+            <h2>Mobile Verification</h2>
+
+            <p>Verify your mobile number with a 6-digit OTP.</p>
+
+            <form id="phoneForm">
+                <input id="phone" type="tel" placeholder="10-digit mobile number" pattern="[6-9][0-9]{9}" maxlength="10"
+                    required>
+                <button type="submit" id="sendBtn">
+                    Send OTP
+                </button>
+            </form>
+
+            <div id="recaptcha-container"></div>
+
+            <form id="otpForm" hidden>
+                <input id="otp" type="text" inputmode="numeric" maxlength="6" pattern="[0-9]{6}"
+                    placeholder="Enter 6-digit OTP" required>
+                <button type="submit">Verify OTP</button>
+            </form>
+
+            <p id="message" aria-live="polite"></p>
+            <a href="student-dashboard.html">Back to Dashboard</a>
+        </div>
+    </main>
+
+    <script type="module" src="verify-phone.js"></script>
+</body>
+
+</html>

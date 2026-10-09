@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | LaundryEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="dashboard">
+
+        <!-- HEADER -->
+        <header class="dash-header">
+            <h1>🧺 LaundryEase</h1>
+
+            <div class="header-actions">
+                <a href="verify-phone.html">Verify Mobile</a>
+                <a href="change-password.html">Change Password</a>
+                <button id="logoutBtn" type="button">
+                    Logout
+                </button>
+            </div>
+        </header>
+
+        <!-- STUDENT INFORMATION -->
+        <section class="dash-card">
+            <h2 id="welcome">Welcome, Student!</h2>
+
+            <p id="studentDetails"></p>
+            <p id="schedule"></p>
+        </section>
+
+        <!-- LAUNDRY BOOKING -->
+        <section class="dash-card">
+
+            <h2>Book Your Laundry</h2>
+
+            <p>
+                Select your clothes below.
+                Maximum 10 laundry items per booking.
+            </p>
+
+            <form id="laundryForm">
+
+                <h3>👕 Daily Wear</h3>
+
+                <div class="clothes-grid">
+
+                    <label>
+                        Trousers
+                        <input type="number" class="cloth-item" data-type="trousers" min="0" max="10" value="0">
+                    </label>
+
+                    <label>
+                        Shirts
+                        <input type="number" class="cloth-item" data-type="shirts" min="0" max="10" value="0">
+                    </label>
+
+                    <label>
+                        T-Shirts
+                        <input type="number" class="cloth-item" data-type="tshirts" min="0" max="10" value="0">
+                    </label>
+
+                    <label>
+                        Jeans
+                        <input type="number" class="cloth-item" data-type="jeans" min="0" max="10" value="0">
+                    </label>
+
+                    <label>
+                        Shorts
+                        <input type="number" class="cloth-item" data-type="shorts" min="0" max="10" value="0">
+                    </label>
+
+                    <label>
+                        Socks (Pairs)
+                        <input type="number" class="cloth-item" data-type="socks" min="0" max="10" value="0">
+                    </label>
+
+                </div>
+
+                <h3>🛏️ Bedsheets</h3>
+
+                <div class="clothes-grid">
+
+                    <label>
+                        Personal Bedsheets
+                        <input type="number" class="cloth-item" data-type="personalBedsheets" min="0" max="10"
+                            value="0">
+                    </label>
+
+                    <label>
+                        College Bedsheets
+                        <input type="number" class="cloth-item" data-type="collegeBedsheets" min="0" max="10" value="0">
+                    </label>
+
+                </div>
+
+                <h3>🧴 Towels</h3>
+
+                <div class="clothes-grid">
+
+                    <label>
+                        Personal Towels
+                        <input type="number" class="cloth-item" data-type="personalTowels" min="0" max="10" value="0">
+                    </label>
+
+                    <label>
+                        College Towels
+                        <input type="number" class="cloth-item" data-type="collegeTowels" min="0" max="10" value="0">
+                    </label>
+
+                </div>
+
+                <h3>🛌 Pillow Covers</h3>
+
+                <div class="clothes-grid">
+
+                    <label>
+                        Personal Pillow Covers
+                        <input type="number" class="cloth-item" data-type="personalPillow" min="0" max="10" value="0">
+                    </label>
+
+                    <label>
+                        College Pillow Covers
+                        <input type="number" class="cloth-item" data-type="collegePillow" min="0" max="10" value="0">
+                    </label>
+
+                </div>
+
+                <h3>Other Items</h3>
+
+                <div class="clothes-grid">
+                    <label>
+                        Other Clothes
+                        <input type="number" class="cloth-item" data-type="other" min="0" max="10" value="0">
+                    </label>
+                </div>
+
+                <!-- TOTAL CLOTH COUNT -->
+                <div class="total-clothes">
+                    <h3>
+                        Total Clothes:
+                        <span id="totalClothes">0</span> / 10
+                    </h3>
+                    <p id="limitMessage" aria-live="polite"></p>
+                </div>
+
+                <!-- SPECIAL INSTRUCTIONS -->
+                <label for="notes">
+                    Special Laundry Instructions
+                </label>
+
+                <textarea id="notes" rows="3" placeholder="Any special instructions?"></textarea>
+
+                <button type="submit" id="bookBtn">
+                    Book Laundry
+                </button>
+
+            </form>
+
+            <p id="bookingMessage" aria-live="polite"></p>
+
+        </section>
+
+        <!-- LAUNDRY TRACKING -->
+        <section class="dash-card">
+            <h2>My Laundry Orders</h2>
+
+            <p>Track your laundry and view your bag QR code.</p>
+
+            <div id="ordersList"></div>
+        </section>
+
+    </main>
+
+    <!-- QR CODE LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- STUDENT DASHBOARD JAVASCRIPT -->
+    <script type="module" src="student-dashboard.js"></script>
+</body>
+
+</html>

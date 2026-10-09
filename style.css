@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 60px;
+}
+
+h1 {
+    color: #1d4ed8;
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.login-box {
+    background: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px #00000015;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#message {
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.dashboard {
+    width: min(100%, 950px);
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.dash-header button {
+    width: auto;
+    padding: 12px 24px;
+}
+
+.dash-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.dash-card h2 {
+    color: #1d4ed8;
+}
+
+.dash-card label {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.dash-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.order-card {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.order-card h3 {
+    color: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+    .dash-header {
+        flex-direction: column;
+    }
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+}
+
+.qr-container img,
+.qr-container canvas {
+    max-width: 100%;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 15px #00000012;
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: #475569;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 34px;
+    margin-top: 12px;
+    color: #2563eb;
+}

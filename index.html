@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaundryEase | Smart Campus Laundry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="logo">🧺</div>
+        <h1>LaundryEase</h1>
+        <p>Smart Laundry Management for College Hostels</p>
+
+        <div class="login-box">
+            <h2>Welcome to LaundryEase</h2>
+            <p>Select how you want to continue</p>
+
+            <button onclick="selectRole('student')">
+                Student Login
+            </button>
+
+            <button onclick="selectRole('staff')">
+                Laundry Staff Login
+            </button>
+
+            <button onclick="selectRole('admin')">
+                Admin Login
+            </button>
+
+            <p id="message"></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

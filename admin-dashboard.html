@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | LaundryEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="dashboard">
+        <header class="dash-header">
+            <h1>🧺 LaundryEase Admin</h1>
+            <button onclick="location.href='index.html'">
+                Home
+            </button>
+        </header>
+
+        <h2>Dashboard Overview</h2>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Registered Students</h3>
+                <strong id="totalStudents">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Orders</h3>
+                <strong id="totalOrders">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <h3>Active Orders</h3>
+                <strong id="activeOrders">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed Orders</h3>
+                <strong id="completedOrders">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <h3>Ready for Collection</h3>
+                <strong id="readyOrders">0</strong>
+            </div>
+        </section>
+
+        <section class="dash-card">
+            <h2>Hostel-Wise Statistics</h2>
+            <div id="hostelStats"></div>
+        </section>
+
+        <section class="dash-card">
+            <h2>Collection Points</h2>
+            <p>Orders grouped by hostel, room type and block.</p>
+            <div id="collectionPoints"></div>
+        </section>
+
+        <section class="dash-card">
+            <h2>All Laundry Orders</h2>
+            <input id="adminSearch" type="search" placeholder="Search Student ID or Bag ID">
+            <div id="adminOrders"></div>
+        </section>
+    </main>
+
+    <script src="admin-dashboard.js"></script>
+</body>
+
+</html>

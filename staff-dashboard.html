@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard | LaundryEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="dashboard">
+        <header class="dash-header">
+            <h1>🧺 LaundryEase Staff</h1>
+            <button onclick="location.href='index.html'">
+                Home
+            </button>
+        </header>
+
+        <section class="dash-card">
+            <h2>📷 Scan Laundry Bag QR Code</h2>
+            <p>Scan a student's QR code to identify the laundry bag.</p>
+
+            <div id="qr-reader" style="width:100%;max-width:400px;margin:auto;"></div>
+
+            <h3>Or Enter Bag ID Manually</h3>
+            <input id="manualBagId" placeholder="Enter Bag ID">
+            <button id="findBagBtn">Find Laundry Bag</button>
+
+            <p id="scanMessage"></p>
+            <div id="scannedOrder"></div>
+        </section>
+
+        <section class="dash-card">
+            <h2>Laundry Overview</h2>
+            <p>Total Orders: <strong id="totalOrders">0</strong></p>
+            <p>Active Orders: <strong id="activeOrders">0</strong></p>
+            <p>Ready for Collection:
+                <strong id="readyOrders">0</strong>
+            </p>
+        </section>
+
+        <section class="dash-card">
+            <h2>Find Laundry Bags</h2>
+
+            <input type="search" id="searchBag" placeholder="Search Bag ID or Student ID">
+
+            <select id="filterHostel">
+                <option value="">All Hostels</option>
+                <option value="Boys">Boys Hostel</option>
+                <option value="Girls">Girls Hostel</option>
+            </select>
+
+            <select id="filterRoomType">
+                <option value="">All Room Types</option>
+                <option value="AC">AC</option>
+                <option value="Non-AC">Non-AC</option>
+            </select>
+
+            <input type="search" id="filterBlock" placeholder="Filter by Hostel Block">
+        </section>
+
+        <section class="dash-card">
+            <h2>Laundry Orders</h2>
+            <div id="staffOrders"></div>
+        </section>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+
+    <script type="module" src="scanner.js"></script>
+</body>
+
+</html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+
+<script type="module" src="scanner.js"></script>
+
+</body>
+
+</html>

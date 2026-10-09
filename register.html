@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | LaundryEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="login-box">
+            <h1>🧺 LaundryEase</h1>
+            <h2>Student Registration</h2>
+
+            <form id="registerForm">
+                <input id="name" placeholder="Full Name" required>
+                <input id="laundryId" type="text" placeholder="Enter Laundry ID from your card" autocomplete="off"
+                    required> <input id="email" type="email" placeholder="College Email" required>
+                <input id="password" type="password" placeholder="Create Password" required minlength="6">
+
+                <select id="hostel" required>
+                    <option value="">Select Hostel</option>
+                    <option value="Boys">Boys Hostel</option>
+                    <option value="Girls">Girls Hostel</option>
+                </select>
+
+                <select id="roomType" required>
+                    <option value="">Select Room Type</option>
+                    <option value="AC">AC Room</option>
+                    <option value="Non-AC">Non-AC Room</option>
+                </select>
+
+                <input id="block" placeholder="Hostel Block" required>
+                <input id="room" placeholder="Room Number" required>
+
+                <button type="submit">Create Account</button>
+            </form>
+
+            <p id="message"></p>
+            <p>Already registered? <a href="login.html">Login</a></p>
+        </div>
+    </main>
+
+    <script type="module" src="register.js"></script>
+</body>
+
+</html>
